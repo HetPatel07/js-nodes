@@ -1,0 +1,36 @@
+//function clickh() {
+//    var a = document.getElementById('child1').innerHTML = 'parent1 <ul class="innerul"><li id="childname" class="float-left">name : value</li><li><button onclick="innerclick()" class=" ml-3 float-left">+</button></li></ul>'; document.getElementById('childname').contentEditable = "true";
+//    console.log(a);
+//}
+//
+//function innerclick() {
+//    b = document.getElementById('childname');
+//    //        var person = {
+//    //            name = b;
+//    //            ans = function () {
+//    //                return this.name;
+//    //            }
+//    //        };
+//    var c = b.innerHTML = 'name : value<ul><li id="childname">name : value</li></ul><button onclick="innerclick()" class="ml-3">+</button>';
+//    //    var c = document.getElementById('child1').innerHTML = ans();
+//} 
+
+
+function parent1() {
+    var i = 0;
+    while (i < 5) {
+        var parent = document.getElementsByClassName('parentli')[i];
+        console.log(parent);
+        childul.appendChild(childli);
+        parent.appendChild(childul);
+        var childul = document.createElement('ul');
+        console.log(childul);
+        var childli = document.createElement('li');
+    }
+    do {
+        childli.innerHTML = "<p contenteditable='true' class='parentli'>Name : Value <span class='ml-5 bg-warning p-3 d-inline-block' onclick='parent1()'>+</span></p>";
+        i++;
+    }
+
+
+}
