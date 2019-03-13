@@ -16,15 +16,35 @@
 //} 
 
 
+
+var i = 0;
+
 function parent1() {
-    var i = 0;
+    console.log(i);
     var parent = document.getElementsByClassName('parentli')[0];
-    parent.setAttribute('class','node mt-4');
-    console.log(parent);
+    //    if (i == 0) {} else {
+    //        var parent = document.getElementsByClassName('parentli')[i];
+    //    }
+    //    i = i + 1;
+    //    parent.setAttribute('class', 'node mt-4');
     var childul = document.createElement('ul');
-    console.log(childul);
     var childli = document.createElement('li');
     childul.appendChild(childli);
     parent.appendChild(childul);
-    childli.innerHTML = "<p contenteditable='true' class='parentli mt-4 ml-3 node'><span class='bg'>Name : Value </span><span class='ml-1 bg-warning p-3 d-inline-block' onclick='parent1()'>+</span></p>";
+    childli.innerHTML = "<p contenteditable='true' class='parentli mt-4 ml-3 node'><span class='bg'>Name : Value </span><span class='ml-1 bg-warning p-3 d-inline-block' onclick='parent2()'>+</span></p>";
+}
+
+
+function parent2() {
+    var parent = document.getElementsByClassName('parentli')[1];
+    //    if (i == 0) {} else {
+    //        var parent = document.getElementsByClassName('parentli')[i];
+    //    }
+    //    i = i + 1;
+    //    parent.setAttribute('class', 'node mt-4');
+    var childul = document.createElement('ul');
+    var childli = document.createElement('li');
+    childul.appendChild(childli);
+    parent.appendChild(childul);
+    childli.innerHTML = "<p contenteditable='true' class='parentli mt-4 ml-3 node'><span class='bg'>Name : Value </span></p>";
 }
