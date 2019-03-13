@@ -19,12 +19,12 @@
 function parent1() {
     var i = 0;
     var parent = document.getElementsByClassName('parentli')[0];
-    parent.setAttribute('class','hi');
+    parent.setAttribute('class','node mt-4');
     console.log(parent);
     var childul = document.createElement('ul');
     console.log(childul);
     var childli = document.createElement('li');
     childul.appendChild(childli);
     parent.appendChild(childul);
-    childli.innerHTML = "<p contenteditable='true' class='parentli'>Name : Value <span class='ml-5 bg-warning p-3 d-inline-block' onclick='parent1()'>+</span></p>";
+    childli.innerHTML = "<p contenteditable='true' class='parentli mt-4 ml-3 node'><span class='bg'>Name : Value </span><span class='ml-1 bg-warning p-3 d-inline-block' onclick='parent1()'>+</span></p>";
 }

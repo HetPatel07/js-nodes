@@ -27,7 +27,9 @@
 -->
     <div class="row align-items-center h-100 justify-content-center">
         <ul>
-            <li class="parentli">PARENT 1 <span class="ml-5 bg-warning p-3 d-inline-block" onclick="parent1()">+</span> </li>
+            <li class="parentli node">
+                <span class="bg">PARENT 1</span> <span class=" bg-warning p-3 d-inline-block" onclick="parent1()">+</span>
+            </li>
         </ul>
     </div>
 
@@ -39,10 +41,27 @@
     <style>
 
         li{
-        list-style: disc;
+        list-style: none;
             font-size: 20px;
             font-weight: 700;
+            position: relative;
     }
+        .node::after{
+            content: '';
+            position: absolute;
+            top: -24px;
+            left: -20px;
+            height: 100%;
+            width: 15%;
+            border-left: 5px solid #333;
+            border-bottom: 5px solid #333;
+            
+        }
+        li .bg{
+            padding: 20px;
+            width: 100%;
+            background-color: lightgrey;
+        }
     </style>
 
     <!-- /Start your project here-->
