@@ -18,19 +18,13 @@
 
 function parent1() {
     var i = 0;
-    while (i < 5) {
-        var parent = document.getElementsByClassName('parentli')[i];
-        console.log(parent);
-        childul.appendChild(childli);
-        parent.appendChild(childul);
-        var childul = document.createElement('ul');
-        console.log(childul);
-        var childli = document.createElement('li');
-    }
-    do {
-        childli.innerHTML = "<p contenteditable='true' class='parentli'>Name : Value <span class='ml-5 bg-warning p-3 d-inline-block' onclick='parent1()'>+</span></p>";
-        i++;
-    }
-
-
+    var parent = document.getElementsByClassName('parentli')[0];
+    parent.setAttribute('class','hi');
+    console.log(parent);
+    var childul = document.createElement('ul');
+    console.log(childul);
+    var childli = document.createElement('li');
+    childul.appendChild(childli);
+    parent.appendChild(childul);
+    childli.innerHTML = "<p contenteditable='true' class='parentli'>Name : Value <span class='ml-5 bg-warning p-3 d-inline-block' onclick='parent1()'>+</span></p>";
 }
