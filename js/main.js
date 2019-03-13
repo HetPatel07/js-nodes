@@ -19,32 +19,44 @@
 
 var i = 0;
 
-function parent1() {
-    console.log(i);
-    var parent = document.getElementsByClassName('parentli')[0];
+function parent1(india) {
+    var main = india.parentNode;
+    //    var parent = document.getElementsByClassName('parentli')[0];
     //    if (i == 0) {} else {
     //        var parent = document.getElementsByClassName('parentli')[i];
     //    }
     //    i = i + 1;
     //    parent.setAttribute('class', 'node mt-4');
     var childul = document.createElement('ul');
-    var childli = document.createElement('li');
+    var childli =
+
+        document.createElement('li');
+
     childul.appendChild(childli);
-    parent.appendChild(childul);
-    childli.innerHTML = "<p contenteditable='true' class='parentli mt-4 ml-3 node'><span class='bg'>Name : Value </span><span class='ml-1 bg-warning p-3 d-inline-block' onclick='parent2()'>+</span></p>";
-}
-
-
-function parent2() {
-    var parent = document.getElementsByClassName('parentli')[1];
-    //    if (i == 0) {} else {
-    //        var parent = document.getElementsByClassName('parentli')[i];
+//    if (i == 0) {
+//        i = i + 1;
+//    }
+    main.appendChild(childul);
+    //    else {
+    //        main.appendChild(childul);
+    ////        var an = guj.previousElementSibling;
+    ////        var ac = an.appendChild(guj);
+    ////        console.log(ac.parentNode);
     //    }
-    //    i = i + 1;
-    //    parent.setAttribute('class', 'node mt-4');
-    var childul = document.createElement('ul');
-    var childli = document.createElement('li');
-    childul.appendChild(childli);
-    parent.appendChild(childul);
-    childli.innerHTML = "<p contenteditable='true' class='parentli mt-4 ml-3 node'><span class='bg'>Name : Value </span></p>";
+    childli.innerHTML = "<p contenteditable='true' class='parentli mt-4 ml-3 node'><span class='bg'>GUJAR AT</span><span class='ml-1 bg-warning p-3 d-inline-block' onclick='parent1(this)'>+</span></p>";
 }
+
+
+//function parent2() {
+//    var parent = document.getElementsByClassName('parentli')[1];
+//    //    if (i == 0) {} else {
+//    //        var parent = document.getElementsByClassName('parentli')[i];
+//    //     }
+//    //    i = i + 1;
+//    //    parent.setAttribute('class', 'node mt-4');
+//    var childul = document.createElement('ul');
+//    var childli = document.createElement('li');
+//    childul.appendChild(childli);
+//    parent.appendChild(childul);
+//    childli.innerHTML = "<p contenteditable='true' class='parentli mt-4 ml-3 node'><span class='bg'>AHMEDABAD</span></p>";
+//}

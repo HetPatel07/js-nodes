@@ -28,7 +28,7 @@
     <div class="row align-items-center h-100 justify-content-center">
         <ul>
             <li class="parentli node" id="node">
-                <span class="bg">PARENT 1</span> <span class=" bg-warning p-3 d-inline-block" onclick="parent1()">+</span>
+                <span class="bg">INDIA</span> <span class=" bg-warning p-3 d-inline-block" onclick="parent1(this)">+</span>
             </li>
         </ul>
     </div>
@@ -39,12 +39,15 @@
 
 
     <style>
-
+        ul{
+            padding: 0;
+        }
         li{
         list-style: none;
             font-size: 20px;
             font-weight: 700;
             position: relative;
+            margin-left: 20px;
     }
         #node::after{
             content: '';
