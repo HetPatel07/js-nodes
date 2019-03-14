@@ -28,7 +28,8 @@
     <div class="row align-items-center h-100 justify-content-center">
         <ul>
             <li class="parentli node" id="node">
-                <span class="bg">INDIA</span> <span class=" bg-warning p-3 d-inline-block" onclick="parent1(this)">+</span>
+                <span class="bg" contenteditable="true">INDIA</span> <span class=" bg-warning p-3 d-inline-block" onclick="parent1(this)">+</span>
+                <ul></ul>
             </li>
         </ul>
     </div>
@@ -39,6 +40,9 @@
 
 
     <style>
+        body{
+            overflow: hidden;
+        }
         ul{
             padding: 0;
         }

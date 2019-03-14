@@ -19,32 +19,37 @@
 
 var i = 0;
 
+
+
 function parent1(india) {
     var main = india.parentNode;
+    //    var childul = document.createElement('ul');
+    var childli = document.createElement('li');
+    childli.innerHTML = "<span class='bg parentli mt-4 ml-3 node' contenteditable='true'>GUJARAT</span><span class='ml-1 bg-warning p-3 d-inline-block' onclick='parent1(this)'>+</span><ul></ul>";
+    var childul = india.nextElementSibling;
+    console.log(childul);
+    childul.appendChild(childli);
+    main.appendChild(childul);
+    //    if (i == 0) {
     //    var parent = document.getElementsByClassName('parentli')[0];
     //    if (i == 0) {} else {
     //        var parent = document.getElementsByClassName('parentli')[i];
     //    }
     //    i = i + 1;
     //    parent.setAttribute('class', 'node mt-4');
-    var childul = document.createElement('ul');
-    var childli =
-
-        document.createElement('li');
-
-    childul.appendChild(childli);
-//    if (i == 0) {
-//        i = i + 1;
-//    }
-    main.appendChild(childul);
+    //        i = i + 1;
+    //    }
     //    else {
     //        main.appendChild(childul);
     ////        var an = guj.previousElementSibling;
     ////        var ac = an.appendChild(guj);
     ////        console.log(ac.parentNode);
     //    }
-    childli.innerHTML = "<p contenteditable='true' class='parentli mt-4 ml-3 node'><span class='bg'>GUJAR AT</span><span class='ml-1 bg-warning p-3 d-inline-block' onclick='parent1(this)'>+</span></p>";
 }
+
+//function again2(){
+//    
+//}
 
 
 //function parent2() {
